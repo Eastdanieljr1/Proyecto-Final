@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="755.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaClientesControlador">
+   <children>
+      <TableView fx:id="tblClientes" prefHeight="305.0" prefWidth="565.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="colID" maxWidth="500.0" minWidth="-Infinity" prefWidth="67.0" text="ID" />
+          <TableColumn fx:id="colNombre" maxWidth="500.0" minWidth="-Infinity" prefWidth="103.0" text="Nombre" />
+            <TableColumn fx:id="colApellidoPat" maxWidth="500.0" minWidth="-Infinity" prefWidth="109.0" text="Apellido Paterno" />
+            <TableColumn fx:id="colApellidoMat" maxWidth="500.0" minWidth="-Infinity" prefWidth="115.0" text="Apellido Materno" />
+            <TableColumn fx:id="colEdad" maxWidth="500.0" minWidth="-Infinity" text="Edad" />
+            <TableColumn fx:id="colDireccion" maxWidth="500.0" minWidth="-Infinity" prefWidth="268.0" text="Dirección" />
+        </columns>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </TableView>
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" styleClass="VBox" stylesheets="@main.css" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#Agregar" text="Agregar">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#Modificar" text="Modificar">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#Eliminar" text="Eliminar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
